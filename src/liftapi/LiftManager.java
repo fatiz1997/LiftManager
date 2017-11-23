@@ -105,16 +105,14 @@ public class LiftManager {
                 else
                     return o1.getId() - o2.getId();
             }
-            else if(!o2.isMoving() && o1.isMoving()){
+            if(o1.isMoving()){
                 return -1;
             }
-            else if(!o1.isMoving() && o2.isMoving()){
+            if(o2.isMoving()){
                 return 1;
             }
-            else{
-//                    both lifts don't move
-                return o1.getId() - o2.getId();
-            }
+//           both lifts don't move
+            return o1.getId() - o2.getId();
         }
     };
 }
