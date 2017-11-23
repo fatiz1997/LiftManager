@@ -69,6 +69,6 @@ public class Lift {
     }
 
     public boolean isAvailable(){
-        return (maxPlaces - busyPlaces) != 0;
+        return (maxPlaces - busyPlaces) > 0;
     }
 }
